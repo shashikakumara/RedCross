@@ -110,7 +110,7 @@ ResultSet resultSet = null;
     	<div class="col-75">
       		<select id="name" name="name">
         		<option value="mask">Mask</option>
-        		<option value="glove">Gloves</option>
+        		<option value="gloves">Gloves</option>
         		<option value="sanitizer">Sanitizer</option>
         		<option value="ppekit">PPE kit</option>
         		<option value="jackets">Jackets</option>
