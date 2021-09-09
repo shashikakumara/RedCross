@@ -11,8 +11,8 @@ Technologies we used
 
 Team Members
 * Shashika Kumara
-* Mayantha Katunanayake
-* Kareshaan
+* Mayantha Karunanayake
+* Kareshaan Logeswaran
 * Dulitha Kaluarachchi
 * Dinu Ehelapitiya
 * Udaya Ranasinghe
