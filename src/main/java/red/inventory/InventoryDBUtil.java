@@ -1,7 +1,7 @@
 package red.inventory;
 
 import java.sql.Connection;
-
+import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
@@ -176,6 +176,49 @@ public class InventoryDBUtil {
     	}
     	
     	return isSuccess;
+	}
+	
+	public static ArrayList<Invent> getAllInventory1() {
+		ArrayList<Invent> invent = new ArrayList<Invent>();
+		
+		try {
+			//database connection
+			 String url ="jdbc:mysql://localhost:3306/hotell"; //my sql location
+			 String user ="root";
+		     String pass = "";
+		     
+		     Class.forName("com.mysql.jdbc.Driver");//create driver
+				Connection con = DriverManager.getConnection(url , user , pass);// create db connections
+				java.sql.Statement stmt = con.createStatement();
+				
+				String sql = "select * from hotell.item;";
+				
+				ResultSet rs = stmt.executeQuery(sql);
+				
+				while(rs.next()) {  //variables for catch the values
+					
+					int id = rs.getInt(1);
+					String name = rs.getString(2);
+					int quantity=rs.getInt(3);
+					double unit=rs.getDouble(4);
+					double total=rs.getDouble(5);
+					
+				
+					Invent cus = new Invent(id,name,quantity,unit,total);// customer object
+					
+					
+					invent.add(cus); //customer ArrayList
+				
+				}
+		     
+			
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+		return invent;
 	}
 
 }
