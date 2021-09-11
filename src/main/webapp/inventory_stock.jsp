@@ -102,7 +102,7 @@ while(resultSet.next()){
 <td><%=resultSet.getString("id") %></td>
 <td><%=resultSet.getString("name") %></td>
 <td><%=resultSet.getString("quantity") %></td>
-<td><a href="inventory_update.jsp?id=<%=resultSet.getString("id")%>">Update</a></td>
+<td><a href="inventory_delete?id=<%=resultSet.getString("id")%>">Update</a></td>
 
 </tr>
 

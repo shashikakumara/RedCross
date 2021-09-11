@@ -2,14 +2,10 @@ package red.inventory;
 
 import java.sql.Connection;
 
-
-
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-
-
 
 public class InventoryDBUtil {
 	
@@ -154,9 +150,9 @@ public class InventoryDBUtil {
     }
     
     
-    public static boolean deleteCustomer(String id, String quantity, String name) {
-    	
-    	int convId = Integer.parseInt(id);
+
+	public static boolean deleteInventory(String id) {
+		int convId = Integer.parseInt(id);
 
     	
     	try {
@@ -180,6 +176,6 @@ public class InventoryDBUtil {
     	}
     	
     	return isSuccess;
-    }
+	}
 
 }

@@ -19,22 +19,19 @@ public class Inventory_DeleteServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String id = request.getParameter("cusid");
-		String name = request.getParameter("name");
-		String quantity = request.getParameter("quantity");
+		
 		boolean isTrue;
 		
-		isTrue = InventoryDBUtil.deleteCustomer(id,name,quantity);
+		isTrue = InventoryDBUtil.deleteInventory(id);
 		
 		if (isTrue == true) {
-			RequestDispatcher dispatcher = request.getRequestDispatcher("customerinsert.jsp");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("inventory_view.jsp");
 			dispatcher.forward(request, response);
 		}
 		else {
 			
-			List<Inventory> cusDetails = InventoryDBUtil.getCustomerDetails(id);
-			request.setAttribute("cusDetails", cusDetails);
 			
-			RequestDispatcher dispatcher = request.getRequestDispatcher("useraccount.jsp");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("unsuccess.jsp");
 			dispatcher.forward(request, response);
 		}
 		
