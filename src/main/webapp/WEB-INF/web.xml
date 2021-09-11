@@ -14,6 +14,15 @@
     		<servlet-name>inventory_insert</servlet-name>
     		<url-pattern>/insert</url-pattern>
     	</servlet-mapping>
+    	
+    	<servlet>
+			<servlet-name>inventory_update</servlet-name>
+			<servlet-class>red.inventory.Inventory_UpdateServlet</servlet-class>
+		</servlet>
+		<servlet-mapping>
+			<servlet-name>inventory_update</servlet-name>
+			<url-pattern>/update</url-pattern>
+		</servlet-mapping>
          
          
 </web-app>
