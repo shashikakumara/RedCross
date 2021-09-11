@@ -16,7 +16,7 @@ Technologies we used
 * CSS
 * Java
 
-Team Members
+👤 Team Members
 * Shashika Kumara
 * Mayantha Karunanayake
 * Kareshaan Logeswaran
