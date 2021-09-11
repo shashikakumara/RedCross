@@ -3,8 +3,11 @@ package red.inventory;
 import java.sql.Connection;
 
 
+
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 
 
@@ -111,6 +114,68 @@ public class InventoryDBUtil {
     		
     	}
     	catch(Exception e) {
+    		e.printStackTrace();
+    	}
+    	
+    	return isSuccess;
+    }
+	
+	public static List<Inventory> getCustomerDetails(String Id) {
+    	
+    	int convertedID = Integer.parseInt(Id);
+    	
+    	ArrayList<Inventory> cus = new ArrayList<>();
+    	
+    	try {
+    		
+    		con = dbconnect.getConnection();
+    		stmt = con.createStatement();
+    		String sql = "select * from customer where id='"+convertedID+"'";
+    		rs = stmt.executeQuery(sql);
+    		
+    		while(rs.next()) {
+    			int id = rs.getInt(1);
+    			String name = rs.getString(2);
+    			String shop = rs.getString(3);
+    			String date = rs.getString(4);
+    			int quantity = rs.getInt(6);
+    			String user = rs.getString(7);
+    			double total = rs.getDouble(8);
+    			
+    			Inventory c = new Inventory(id,name,shop,date,quantity,user,total);
+    			cus.add(c);
+    		}
+    		
+    	}
+    	catch(Exception e) {
+    		e.printStackTrace();
+    	}	
+    	return cus;	
+    }
+    
+    
+    public static boolean deleteCustomer(String id, String quantity, String name) {
+    	
+    	int convId = Integer.parseInt(id);
+
+    	
+    	try {
+    		
+    		con = dbconnect.getConnection();
+    		stmt = con.createStatement();
+    		
+    		String sql2 = "delete from customer where id='"+convId+"'";
+    		int r = stmt.executeUpdate(sql2);
+    		
+    		if (r > 0) {
+    			isSuccess = true;
+    		}
+    		else {
+    			isSuccess = false;
+    		}
+    		
+    	}
+    	catch (Exception e) {
     		e.printStackTrace();
     	}
     	
