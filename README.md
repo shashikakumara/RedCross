@@ -4,7 +4,7 @@ This is a Support system for the Red Cross branch.
 
 
 
-###Technologies we used
+### Technologies we used
 * Html
 * CSS
 * Java
@@ -46,6 +46,6 @@ This is a Support system for the Red Cross branch.
 - LinkedIn: [LinkedIn]()
 
 👤 Sasanka Vitharana
-- GitHub: [@githubhandle]()
-- Twitter: [@twitterhandle]()
-- LinkedIn: [LinkedIn]()
+- GitHub: [@githubhandle](https://github.com/Sasankavikum)
+- Twitter: [@twitterhandle](https://twitter.com/SasaVikum)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/sasanka-vitharana-607768181/)
