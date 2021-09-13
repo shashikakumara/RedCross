@@ -8,6 +8,7 @@ This is a Support system for the Red Cross branch.
 * Html
 * CSS
 * Java
+* JS
 
 ### Team Members
 👤 Shashika Kumara
