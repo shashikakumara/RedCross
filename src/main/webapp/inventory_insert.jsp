@@ -133,7 +133,7 @@ ResultSet resultSet = null;
       	<label for="fname">Date</label>
     	</div>
     	<div class="col-75">
-      		<input type="text" name="date" required>
+      		<input type="text" name="date" pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])" required>
     </div>
   	</div>
   	

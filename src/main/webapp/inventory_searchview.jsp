@@ -40,7 +40,7 @@
     </head>
     <body>
     
-    	<h1>Item Serach result</h1>
+    	<h1>Item Search result</h1>
     	<a href="inventory_view.jsp"><button class="btnback" align="right">Back</button></a>
         <table border="2">
            
